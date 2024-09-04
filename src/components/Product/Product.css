@@ -8,6 +8,12 @@
     gap: 1rem;
 }
 
+.products>h1{
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+}
+
 .product-card{
     min-width: 300px;
     min-height: 450px;

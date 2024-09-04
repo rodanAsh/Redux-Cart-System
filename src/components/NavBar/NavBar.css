@@ -1,0 +1,46 @@
+.navbar{
+    padding: 12px 24px;
+    background-color: #0717c7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 500;
+    color: #cccccc;
+}
+.logo>span{
+    color: black;
+}
+
+.search-product{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.search-product>input{
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.search-product>.icon{
+    color: #0717c7;
+}
+
+.search-product>input::placeholder{
+    color: #0717c7;
+}
+
+.cart-icon{
+    font-size: 16px;
+    color: #ccc;
+    cursor: pointer;
+}
