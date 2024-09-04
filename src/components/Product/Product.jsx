@@ -2,10 +2,13 @@ import React from 'react'
 import './Product.css'
 import {useState, useEffect} from 'react'
 import { FaStar } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { add } from '../../store/cartSlice';
 
 const Product = () => {
     const [products,setProducts] = useState([])
     const [isLoading,setIsLoading] = useState(false)
+    const dispatch = useDispatch()
 
     const fetchProducts = async() => {
 
@@ -33,6 +36,10 @@ const Product = () => {
             <div>Products are loading .....</div>
         )
     }
+
+    const addProduct = (product) => {
+        dispatch(add(product))
+    }
   return (
     <div className='products'>
         <h1>Product DashBoard</h1>
@@ -50,7 +57,7 @@ const Product = () => {
                             <div>{product.title.substring(0,35)}...</div>
                             <div>Catgeory: {product.category}</div>
                             <div>Rs. {product.price}</div>
-                            <button>Add to Cart</button>
+                            <button onClick={() => addProduct(product)}>Add to Cart</button>
                         </div>
                     </div>
                     
